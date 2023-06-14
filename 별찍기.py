@@ -20,7 +20,7 @@ class u:
     c = n + 1
     for i in range(1, n + 2):
       print(" " * (n + 1 - i) + "*" * (i * 2 - 1))
-      for i in range(1, n + 1):
+    for i in range(1, n + 1):
         c = c - 1
         print(" " * (n + 1 - c) + "*" * (c * 2 - 1))
 
