@@ -1,8 +1,5 @@
-a = int(input())
-b = list(map(int,input().split()))
-c = int(input())
-d = 0
+a,b = map(int,input().split())
+c = list(map(int,input().split()))
 for i in range(a):
-    if b[i] == c:
-        d = d+1
-print(d)
+    if c[i] < b:
+        print(c[i],end=" ")
