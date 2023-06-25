@@ -1,8 +1,14 @@
 a,b = map(int,input().split())
-c = [0] * a
+c=[]
+d=0
+for i in range(1,a+1):
+    c.append(i)
+
 for p in range(b):
-    i,j,k = list(map(int,input().split()))
-    for l in range(i-1,j):
-        c[l] = k
-for g in range(a):
-    print(c[g],end=" ")
+    i,j = list(map(int,input().split()))
+    d = c[i-1]
+    c[i-1] = c[j-1]
+    c[j-1] = d
+
+for i in range(a):
+    print(c[i],end=" ")
