@@ -1,14 +1,11 @@
-a,b = map(int,input().split())
-c=[]
-d=0
-for i in range(1,a+1):
-    c.append(i)
+a = []
 
-for p in range(b):
-    i,j = list(map(int,input().split()))
-    d = c[i-1]
-    c[i-1] = c[j-1]
-    c[j-1] = d
+for i in range(1,31):
+    a.append(i)
 
-for i in range(a):
-    print(c[i],end=" ")
+for _ in range(28):
+    applied = int(input())
+    a.remove(applied)
+
+print(min(a))
+print(max(a))
