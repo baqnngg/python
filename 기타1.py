@@ -1,11 +1,8 @@
 a = []
+for i in range(10):
+    p = int(input())
+    d = p % 42
+    a.append(d)
 
-for i in range(1,31):
-    a.append(i)
-
-for _ in range(28):
-    applied = int(input())
-    a.remove(applied)
-
-print(min(a))
-print(max(a))
+d = set(a)
+print(len(d)) 
