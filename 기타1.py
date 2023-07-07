@@ -1,8 +1,12 @@
-a = []
-for i in range(10):
-    p = int(input())
-    d = p % 42
-    a.append(d)
+a, b = map(int, input().split())
 
-d = set(a)
-print(len(d)) 
+basket = [i for i in range(1,a+1)]
+
+for i in range(b):
+    i,j = map(int, input().split())
+    temp = basket[i-1:j]
+    temp.reverse()
+    basket[i-1:j] = temp
+
+for i in range(a):
+    print(basket[i], end = ' ')
